@@ -28,12 +28,7 @@ const myData= new mongoose.Schema({
     Phone : {
         type:Number,
         required:true,
-        unique:true,
-        validate(value){
-            if(validator.isMobilePhone(value)){
-                throw new Error("Phone validation failed");
-            }
-        }
+        unique:true
         
     },
 
