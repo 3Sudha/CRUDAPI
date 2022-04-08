@@ -12,20 +12,28 @@ import Paper from "@mui/material/Paper";
 import Checkbox from "@mui/material/Checkbox";
 import { visuallyHidden } from "@mui/utils";
 
-function createData(name, Email, phone, Contact_Owner) {
-  return {
-    name, Email, phone, Contact_Owner
-  };
-}
+// function createData(name, Email, phone, Contact_Owner) {
+//   return {
+//     name, Email, phone, Contact_Owner
+//   };
+// }
 
-const rows = [
-  createData("Cupcake", "abc@gmail.com", 9027854692, "Sudha"),
-  createData("Book", "book@gmail.com", 8727854692, "Sudha"),
-  createData("Cruise", "cru@gmail.com", 9327854692, "Sudha"),
-  createData("Nobby", "nob@gmail.com", 9028554692, "Sudha")
+// const rows = [
+//   createData("Cupcake", "abc@gmail.com", 9027854692, "Sudha"),
+//   createData("Book", "book@gmail.com", 8727854692, "Sudha"),
+//   createData("Cruise", "cru@gmail.com", 9327854692, "Sudha"),
+//   createData("Nobby", "nob@gmail.com", 9028554692, "Sudha")
   
-];
+// ];
 
+// export default function Table() {
+//   const [contacts,setContact] = useState([]);
+//   useEffect(()=>{
+//     axios.get("http://localhost:8080/getcontact").then((response)=>{
+//       console.log(response.data);
+//       setContact(response.data);
+//      })
+//    },[])
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
@@ -146,9 +154,6 @@ EnhancedTableHead.propTypes = {
   rowCount: PropTypes.number.isRequired
 };
 
-
-
-
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
@@ -189,8 +194,6 @@ export default function EnhancedTable() {
 
     setSelected(newSelected);
   };
-
-  
 
   const isSelected = (name) => selected.indexOf(name) !== -1;
 
